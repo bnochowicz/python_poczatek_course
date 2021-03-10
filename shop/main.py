@@ -3,7 +3,7 @@
 # your_order = orders.take_order()
 # print(your_order)
 
-from shop.orders import create_new_order
+from shop.orders import create_new_order, orders
 
 def run_shop():
     print("Witaj w naszym sklepie!")
@@ -16,4 +16,8 @@ def run_shop():
         print(f"Łączny koszt wyniesie {total_price} PLN")
 
 if __name__ == "__main__":
-    run_shop()
+    option = None
+    while option != 'X':
+        run_shop()
+        print(orders)
+        option = input("Wybierz 'X' jeśli chcesz wyjsc ze sklepu lub cokolwiek innego zeby zlozyc zamowienie ponownie")
